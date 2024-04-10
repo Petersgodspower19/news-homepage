@@ -1,0 +1,195 @@
+.attribution { font-size: 14px; text-align: center;
+margin: 2rem auto; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/**
+- Mobile: 375px
+- Desktop: 1440px
+## Colors
+### Primary
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+### Neutral
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+## Typography
+### Body Copy
+- Font size (paragraph): 15px
+### Font
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700, 800**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 15px;
+}
+body{
+    font-family: "Inter", sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 4rem;
+}
+p{
+    line-height: 1.8;
+    color: hsl(236, 13%, 42%);
+}
+img{
+  max-width: 100%;
+  width: 100%;
+}
+.sideBar{
+height:100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+background-color: hsl(36, 100%, 99%);
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+.sideBar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration:none;
+    font-size: 20px;
+    color:hsl(240, 100%, 5%);
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sideBar a:hover{
+    color:hsl(5, 85%, 63%);
+}
+.sideBar .closebtn{
+    position:absolute;
+    top: 0;
+    right:0px;
+    width: 10%;
+    margin:10px;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.header .logo{
+    width:5%;
+}
+.header .openBtn{
+    width:5%;
+    cursor: pointer;
+}
+.second-sec{
+    padding: 1.25rem;
+    padding-top: 0;
+}
+.second-sec h1{
+    font-size: 2rem;
+    font: 800;
+    color: hsl(240, 100%, 5%);
+    margin: 1rem 0;
+}
+.second-sec .ppp{
+    margin-bottom: 1rem;
+}
+.second-sec button{
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition:  all 0.3s ease-in-out;
+}
+.second-sec button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+.sub-sec2{
+background-color: hsl(240, 100%, 5%);
+margin-top: 2rem;
+padding: 1.25rem 1.25rem;
+}
+.sub-sec2 h2{
+    color: hsl(35, 77%, 62%);
+}
+.sub-sec2 h3{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.sub-sec2 h3:hover{
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+.sub-sec2 div{
+    padding: 1.25rem 0;
+}
+.sub-sec2 div:not(:last-child){
+    border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.grid-section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5rem;
+    padding: 1.25rem;
+}
+.grid-section img{
+    width: 150px;
+}
+.sub-grid{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.grid-section span{
+    color: hsl(236, 13%, 42%);
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: 75%;
+}
+.grid-section  h4{
+    font-size: 1.25rem;
+    color: hsl(240, 100%, 5%);
+    margin: 1rem 0;
+}
+@media(min-width:768px){
+    .grid-section{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+    }
+}
+@media(min-width:1024px){
+    .second-sec{
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .second-sec h1{
+        font-size: 3rem;
+    }
+    .sub-sub{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        place-items: center;
+        margin-top: 2rem;
+    }
+    .sub-sec2{
+        margin-top: 0;
+    }
+    .grid-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
